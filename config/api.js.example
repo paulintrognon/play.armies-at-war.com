@@ -1,0 +1,9 @@
+module.exports = {
+  secret: 'CHANGE-ME',
+  database: {
+    host: "localhost",
+    user: "aaw",
+    password: "CHANGE-ME",
+    database: "aaw",
+  },
+};

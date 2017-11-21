@@ -16,6 +16,8 @@
     "jsonwebtoken": "^8.1.0",
     "lodash": "^4.17.4",
     "moment": "^2.19.2",
+    "mysql2": "^1.5.1",
+    "sequelize": "^4.22.11",
     "winston": "^2.4.0"
   }
 }
