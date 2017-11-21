@@ -3,8 +3,19 @@
   "version": "0.1.0",
   "description": "game part of armies-at-war.com",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "ln -s ../config node_modules/config"
   },
   "author": "contact@paulintrognon.fr",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "jsonwebtoken": "^8.1.0",
+    "lodash": "^4.17.4",
+    "moment": "^2.19.2",
+    "winston": "^2.4.0"
+  }
 }
