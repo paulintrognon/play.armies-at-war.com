@@ -1,0 +1,10 @@
+{
+  "name": "aaw-game",
+  "version": "0.1.0",
+  "description": "game part of armies-at-war.com",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "contact@paulintrognon.fr",
+  "license": "ISC"
+}
