@@ -4,6 +4,7 @@ module.exports = {
     host: 'http://localhost:3001',
     port: 3001,
   },
+  laravelHost: 'http://www.armies-at-war.dev',
   "logger": {
     "console": {
       "level": "debug",

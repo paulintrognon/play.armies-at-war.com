@@ -1,3 +1,19 @@
-body {
-  font-family: 'Roboto', sans-serif;
+nav.main-nav.navbar {
+  background-color: #34403a;
+}
+
+nav.main-nav.navbar .nav-link {
+  color: #fff;
+}
+
+nav.main-nav.navbar .nav-item:hover {
+  background-color: #54605a;
+}
+
+nav.main-nav.navbar .nav-item .nav-link.active {
+  font-weight: bold;
+}
+
+.main-content {
+  margin-top: 40px;
 }
