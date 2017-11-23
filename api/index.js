@@ -37,7 +37,7 @@ app.use(cookieParser());
 const corsOptions = {
   origin: config.host,
   credentials: true,
-  optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+  optionsSuccessStatus: 200, // some legacy browsers (IE11) choke on 204
 }
 app.use(cors(corsOptions));
 
@@ -53,6 +53,18 @@ app.set('port', port);
  */
 database.connect()
   .then(() => {
+
+  /**
+   * Add auth middleware
+   */
+  const tokenService = require('./services/auth');
+  app.use(function (req, res, next) {
+    if (req.cookies && req.cookies.aaw_token) {
+      req.user = tokenService.decode(req.cookies.aaw_token);
+    }
+    console.log(req.user);
+    next();
+  });
 
   /**
    * Adding the routes
