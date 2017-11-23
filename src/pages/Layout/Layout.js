@@ -9,6 +9,7 @@ import { authenticate } from '../../services/api';
 const forumLink = `${config.laravelHost}/forum`;
 const profileLink = `${config.laravelHost}/profile`;
 const logoutLink = `${config.laravelHost}/logout`;
+const loginLink = `${config.laravelHost}/login`;
 
 
 export default class Layout extends React.Component {
@@ -19,11 +20,11 @@ export default class Layout extends React.Component {
 
   componentWillMount() {
     authenticate()
-    .then(res => {
-      this.setState({ username: res.data.user.name });
-    }, err => {
-      window.location.href = logoutLink;
-    });
+      .then(res => {
+        this.setState({ username: res.data.user.name });
+      }, err => {
+        window.location.href = loginLink;
+      });
   }
 
   render() {
