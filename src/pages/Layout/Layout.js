@@ -32,7 +32,7 @@ export default class Layout extends React.Component {
       <div>
         <nav className="main-nav navbar navbar-dark">
           <div className="container">
-            <a className="navbar-brand" href="/">
+            <a className="navbar-brand" href={config.laravelHost}>
               Armies At War
             </a>
             <ul className="nav justify-content-end">
