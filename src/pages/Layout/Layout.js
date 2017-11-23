@@ -21,9 +21,8 @@ export default class Layout extends React.Component {
     authenticate()
     .then(res => {
       this.setState({ username: res.data.user.name });
-      console.log(this.state.username)
     }, err => {
-      // window.location.href = logoutLink;
+      window.location.href = logoutLink;
     });
   }
 
