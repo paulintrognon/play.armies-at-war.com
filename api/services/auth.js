@@ -9,9 +9,17 @@ module.exports = {
   decode,
 };
 
-function decode(token) {
+function decode(cookies) {
+  if (!cookies || !cookies.aaw_token) {
+    throw new Error('no cookies found - cannot identify user');
+  }
+  const token = cookies.aaw_token;
   try {
-    return jwt.verify(token, secret);
+    const user = jwt.verify(token, secret);
+    return {
+      id: user.user_id,
+      name: user.user_name,
+    }
   } catch (e) {
     logger.error(e.message);
     return;

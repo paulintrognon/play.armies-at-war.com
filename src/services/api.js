@@ -6,6 +6,6 @@ export const api = axios.create({
   withCredentials: true,
 });
 
-export function createNewPlayer(name) {
-  return api.post('/game/player', { name });
+export function authenticate() {
+  return api.get('/auth');
 }

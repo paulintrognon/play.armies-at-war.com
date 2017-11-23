@@ -57,12 +57,9 @@ database.connect()
   /**
    * Add auth middleware
    */
-  const tokenService = require('./services/auth');
+  const authService = require('./services/auth');
   app.use(function (req, res, next) {
-    if (req.cookies && req.cookies.aaw_token) {
-      req.user = tokenService.decode(req.cookies.aaw_token);
-    }
-    console.log(req.user);
+    req.user = authService.decode(req.cookies);
     next();
   });
 
