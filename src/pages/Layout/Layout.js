@@ -23,7 +23,7 @@ export default class Layout extends React.Component {
       this.setState({ username: res.data.user.name });
       console.log(this.state.username)
     }, err => {
-      window.location.href = logoutLink;
+      // window.location.href = logoutLink;
     });
   }
 
@@ -49,7 +49,7 @@ export default class Layout extends React.Component {
               </li>
               <li className="nav-item">
                 <a className="nav-link" href={logoutLink}>
-                  <i class="fa fa-sign-out" aria-hidden="true"></i>
+                  <i className="fa fa-sign-out" aria-hidden="true"></i>
                 </a>
               </li>
             </ul>
